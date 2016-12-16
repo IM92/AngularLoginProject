@@ -1,0 +1,55 @@
+﻿
+
+    
+
+<div class="col-md-6 col-md-offset-3 box1">
+    <div id="header">
+        <h1 id="logintoregister">Register</h1>
+    </div>
+
+    <form name="form" ng-submit="vm.register()" role="form">
+
+           <div class="group form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+            <input class="inputMaterial form-control" type="text" name="firstName" ng-model="vm.user.firstName" id="firstName" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="username">First name</label>
+            <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">firstName is required</span>
+        </div>
+        <div class="group form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+            <input class="inputMaterial form-control" type="lastName" name="lastName" id="lastName" ng-model="vm.user.lastName" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="username">Last name</label>
+            <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">LastName is required</span>
+        </div>
+        <div class="group form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+            <input class="inputMaterial form-control" type="text" name="username" ng-model="vm.user.username" id="username" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="username">Username</label>
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+        </div>
+        <div class="group form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <input class="inputMaterial form-control" type="password" name="password" id="password" ng-model="vm.user.password" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="password">Password</label>
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+        </div>
+       
+            <!--<input type="text" value="1/1/2011" name="dataReg" id="dataReg" ng-model="vm.user.dataReg" >
+            <input type="text" value="1/1/2022" name="dataModif" id="dataModif" ng-model="vm.user.dataModif" >
+        -->
+        <div class="form-actions">
+            <button id="buttonlogintoregister" ng-disabled="form.$invalid || vm.dataLoading" type="submit">Register</button>
+            <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+            />
+        </div>
+    </form>
+
+    <div id="footer-box">
+        <p class="footer-text"><a href="#/login" class="btn btn-link">Cancel</a></p>
+    </div>
+
+</div>
